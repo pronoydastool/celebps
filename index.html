@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CELEBPS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+</head>
+<body>
 
+    <div class="app-container">
+        <!-- ==== SIDE NAVIGATION (Always Visible After Login) ==== -->
+        <nav class="side-nav" id="side-nav">
+            <div class="side-nav-icon active" data-nav="dashboard" title="Dashboard">🏠</div>
+            <div class="side-nav-icon" data-nav="profile" title="Profile">👤</div>
+            <div class="side-nav-icon" data-nav="bookmarks" title="Bookmarks">🔖</div>
+            <div class="side-nav-icon" data-nav="settings" title="Settings">⚙️</div>
+            <div class="side-nav-icon" id="logout-btn" title="Logout">🚪</div>
+        </nav>
+
+        <!-- ==== MAIN CONTENT AREA ==== -->
+        <main class="main-content" id="main-content">
+            <!-- Each 'screen' is a div we can show/hide -->
+            
+            <div id="welcome-screen" class="screen"></div>
+            <div id="login-screen" class="screen"></div>
+            <div id="dashboard-screen" class="screen"></div>
+            <div id="topic-screen" class="screen"></div>
+            <div id="content-screen" class="screen"></div>
+            <div id="profile-screen" class="screen"></div>
+            <div id="bookmarks-screen" class="screen"></div>
+            <div id="calculator-screen" class="screen"></div>
+            <div id="settings-screen" class="screen"></div>
+
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/auth.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
